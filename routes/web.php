@@ -32,4 +32,4 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::get('/product/new', [ProductController::class, 'new'])->name('product.new');
 Route::post('/product', [ProductController::class, 'store'])->name('product.store');
 Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
-
+Route::get('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');

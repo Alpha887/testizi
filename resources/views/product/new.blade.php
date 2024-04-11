@@ -2,6 +2,11 @@
 @extends('layouts.app')
 
 @section('content')
+-
+@foreach ($products as $product)
+    <p>{{ $product->name }} - <a href="{{ route('product.delete', $product->id) }}">Supprimer</a></p>
+@endforeach
+-
     <h1>Ajouter un nouveau produit</h1>
     <form action="{{ route('product.store') }}" method="POST">
         @csrf
